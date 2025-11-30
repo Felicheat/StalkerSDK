@@ -766,7 +766,7 @@
 			"Cloudy":
 			{
 				"BaseSpawnProbability": 0.2,
-				"SpawnProbabilityIncrement": 0.2,
+				"SpawnProbabilityIncrement": 0.15,
 				"SpawnProbabilityCheckTime": 0,
 				"LocationCheckTime": 0,
 				"PlayerHeadOffset":
