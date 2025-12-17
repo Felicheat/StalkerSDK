@@ -46,10 +46,10 @@
 			"Thundery":
 			{
 				"BaseSpawnProbability": 0.1,
-				"SpawnProbabilityIncrement": 0.1,
-				"SpawnProbabilityCheckTime": 15,
-				"MinSpawnDistance": 250,
-				"MaxSpawnDistance": 7000,
+				"SpawnProbabilityIncrement": 0.05,
+				"SpawnProbabilityCheckTime": 20,
+				"MinSpawnDistance": 500,
+				"MaxSpawnDistance": 10000,
 				"SurfaceHeightOffset": 1,
 				"LocationCheckTime": 5,
 				"MaxParticleCount": 1,
@@ -61,10 +61,10 @@
 				"SpawnProbabilityIncrement": 0.4,
 				"SpawnProbabilityCheckTime": 5,
 				"MinSpawnDistance": 150,
-				"MaxSpawnDistance": 7000,
+				"MaxSpawnDistance": 10000,
 				"SurfaceHeightOffset": 1,
 				"LocationCheckTime": 5,
-				"MaxParticleCount": 1,
+				"MaxParticleCount": 2,
 				"bSpawnInPlayerViewport": true
 			},
 			"CalmBeforeEmission":
@@ -73,7 +73,7 @@
 				"SpawnProbabilityIncrement": 0.1,
 				"SpawnProbabilityCheckTime": 15,
 				"MinSpawnDistance": 250,
-				"MaxSpawnDistance": 7000,
+				"MaxSpawnDistance": 10000,
 				"SurfaceHeightOffset": 1,
 				"LocationCheckTime": 5,
 				"MaxParticleCount": 1,
