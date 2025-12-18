@@ -11,31 +11,31 @@ LuminanceSettings : struct.begin {bpatch}
          struct.end
          [*] : struct.begin
             WeatherType = EWeather::Fogy
-            Coefficient = 0.5f
-         struct.end
-         [*] : struct.begin
-            WeatherType = EWeather::Stormy
-            Coefficient = 0.8f
-         struct.end
-         [*] : struct.begin
-            WeatherType = EWeather::LightRainy
-            Coefficient = 0.9f
-         struct.end
-         [*] : struct.begin
-            WeatherType = EWeather::Rainy
-            Coefficient = 0.7f
-         struct.end
-         [*] : struct.begin
-            WeatherType = EWeather::Thundery
             Coefficient = 0.6f
          struct.end
          [*] : struct.begin
+            WeatherType = EWeather::Stormy
+            Coefficient = 0.85f
+         struct.end
+         [*] : struct.begin
+            WeatherType = EWeather::LightRainy
+            Coefficient = 0.85f
+         struct.end
+         [*] : struct.begin
+            WeatherType = EWeather::Rainy
+            Coefficient = 0.75f
+         struct.end
+         [*] : struct.begin
+            WeatherType = EWeather::Thundery
+            Coefficient = 0.65f
+         struct.end
+         [*] : struct.begin
             WeatherType = EWeather::Emission
-            Coefficient = 0.5f
+            Coefficient = 0.6f
          struct.end
          [*] : struct.begin
             WeatherType = EWeather::CalmBeforeEmission
-            Coefficient = 0.7f
+            Coefficient = 0.75f
          struct.end
          [*] : struct.begin
             WeatherType = EWeather::Underground
@@ -51,27 +51,27 @@ LuminanceSettings : struct.begin {bpatch}
          [*] : struct.begin
             TimeFrom = 4.5
             TimeTill = 7
-            Luminance = 0.3f
+            Luminance = 0.35f
          struct.end
          [*] : struct.begin
             TimeFrom = 7
             TimeTill = 9
-            Luminance = 0.8f
+            Luminance = 0.85f
          struct.end
          [*] : struct.begin
             TimeFrom = 9
             TimeTill = 18
-            Luminance = 0.95f
+            Luminance = 1.0f
          struct.end
          [*] : struct.begin
             TimeFrom = 18
             TimeTill = 20
-            Luminance = 0.8f
+            Luminance = 0.85f
          struct.end
          [*] : struct.begin
             TimeFrom = 20
             TimeTill = 21.5
-            Luminance = 0.5f
+            Luminance = 0.55f
          struct.end
          [*] : struct.begin
             TimeFrom = 21.5
