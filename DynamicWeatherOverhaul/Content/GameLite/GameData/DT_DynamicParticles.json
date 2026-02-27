@@ -1,1847 +1,1318 @@
 [
-	{
-		"Name": "LightningStrike",
-		"ParticleType": "LightningStrike",
-		"Providers": [
-			"/Script/CoreUObject.Class'/Script/Stalker2.NiagaraWindIntensityDirectionProvider'"
-		],
-		"bCanSpawnOnWater": true,
-		"bStopOnCutscene": true,
-		"IndoorSpawnPrototype":
-		{
-			"IgnoredAudioRoomPresets": [
-				"GlobalExterior"
-			],
-			"ForbiddenBandwidthTypes": [
-				"Close",
-				"HalfOpen",
-				"Isolated",
-				"Custom"
-			],
-			"MinDistanceToAudioVolume": 500
-		},
-		"BiomeSpawnPrototype":
-		{
-			"AllowedBiomeNames": [
-				"Decidious"
-			],
-			"CountableBiomeNames": [],
-			"BiomeCheckRadius": 1,
-			"MinBiomeCompatabilityPercent": 0
-		},
-		"PlayerDistancePrototype":
-		{
-			"MaxDistance": 0
-		},
-		"WindIntensityPrototype":
-		{
-			"AllowedWindIntensityInterval":
-			{
-				"Min": 0,
-				"Max": 1
-			}
-		},
-		"ActorSpawnPrototypes":
-		{
-			"Thundery":
-			{
-				"BaseSpawnProbability": 0.1,
-				"SpawnProbabilityIncrement": 0.05,
-				"SpawnProbabilityCheckTime": 20,
-				"MinSpawnDistance": 500,
-				"MaxSpawnDistance": 10000,
-				"SurfaceHeightOffset": 1,
-				"LocationCheckTime": 5,
-				"MaxParticleCount": 1,
-				"bSpawnInPlayerViewport": true
-			},
-			"CalmBeforeEmission":
-			{
-				"BaseSpawnProbability": 0.1,
-				"SpawnProbabilityIncrement": 0.1,
-				"SpawnProbabilityCheckTime": 15,
-				"MinSpawnDistance": 250,
-				"MaxSpawnDistance": 10000,
-				"SurfaceHeightOffset": 1,
-				"LocationCheckTime": 5,
-				"MaxParticleCount": 1,
-				"bSpawnInPlayerViewport": true
-			}
-		},
-		"PlayerComponentSpawnPrototypes":
-		{
-		},
-		"ActorComponentSpawnPrototypes":
-		{
-		},
-		"ActorParticleVFXes": [],
-		"PlayerParticleVFX": "None",
-		"LightningStrikeVFX":
-		{
-			"LightningStrikeDefault": "/DynamicWeatherOverhaul/_Stalker_2/VFX/Environment/LightningStrike/NS_LightningStrike_Ground.NS_LightningStrike_Ground",
-			"LightningStrikeMetal":
-			{
-				"NiagaraSystem": "/DynamicWeatherOverhaul/_Stalker_2/VFX/Environment/LightningStrike/NS_LightningStrike_Metal.NS_LightningStrike_Metal",
-				"PhysicalMaterialTypes": [
-					"MetalThin",
-					"MetalSolid",
-					"MetalGrid"
-				]
-			},
-			"LightningStrikeWater":
-			{
-				"NiagaraSystem": "/DynamicWeatherOverhaul/_Stalker_2/VFX/Environment/LightningStrike/NS_LightningStrike_Water.NS_LightningStrike_Water",
-				"PhysicalMaterialTypes": [
-					"Water"
-				]
-			},
-			"LightningStrikeWood":
-			{
-				"NiagaraSystem": "/DynamicWeatherOverhaul/_Stalker_2/VFX/Environment/LightningStrike/NS_LightningStrike_Tree.NS_LightningStrike_Tree",
-				"PhysicalMaterialTypes": [
-					"WoodThin",
-					"WoodSolid",
-					"Slate"
-				]
-			}
-		},
-		"LightningStrikeDamagePrototype":
-		{
-			"PlayerHitProbability": 0.1,
-			"PlayerHitCheckTime": 9000,
-			"HeightPriorityRadius": 500,
-			"HeightPriorityUsageProbability": 0.5,
-			"PlayerHitEffects": [
-				{
-					"EffectSID":
-					{
-						"Value": "LightningStrikeHitPlayer"
-					}
-				},
-				{
-					"EffectSID":
-					{
-						"Value": "ElectroIntensityPostProcess"
-					}
-				}
-			],
-			"NPCHitEffects": [
-				{
-					"EffectSID":
-					{
-						"Value": "LightningStrikeHitNPC"
-					}
-				}
-			]
-		}
-	},
-	{
-		"Name": "TumbleweedFlies",
-		"ParticleType": "TumbleweedFlies",
-		"Providers": [],
-		"bCanSpawnOnWater": true,
-		"bStopOnCutscene": false,
-		"IndoorSpawnPrototype":
-		{
-			"IgnoredAudioRoomPresets": [
-				"GlobalExterior"
-			],
-			"ForbiddenBandwidthTypes": [
-				"Close",
-				"HalfOpen",
-				"Isolated",
-				"Custom"
-			],
-			"MinDistanceToAudioVolume": 0
-		},
-		"BiomeSpawnPrototype":
-		{
-			"AllowedBiomeNames": [],
-			"CountableBiomeNames": [],
-			"BiomeCheckRadius": 1,
-			"MinBiomeCompatabilityPercent": 0
-		},
-		"PlayerDistancePrototype":
-		{
-			"MaxDistance": 500
-		},
-		"WindIntensityPrototype":
-		{
-			"AllowedWindIntensityInterval":
-			{
-				"Min": 0,
-				"Max": 0.5
-			}
-		},
-		"ActorSpawnPrototypes":
-		{
-		},
-		"PlayerComponentSpawnPrototypes":
-		{
-		},
-		"ActorComponentSpawnPrototypes":
-		{
-		},
-		"ActorParticleVFXes": [],
-		"PlayerParticleVFX": "None",
-		"LightningStrikeVFX":
-		{
-			"LightningStrikeDefault": "None",
-			"LightningStrikeMetal":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			},
-			"LightningStrikeWater":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			},
-			"LightningStrikeWood":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			}
-		},
-		"LightningStrikeDamagePrototype":
-		{
-			"PlayerHitProbability": 0,
-			"PlayerHitCheckTime": 0,
-			"HeightPriorityRadius": 1,
-			"HeightPriorityUsageProbability": 0,
-			"PlayerHitEffects": [],
-			"NPCHitEffects": []
-		}
-	},
-	{
-		"Name": "Leaves",
-		"ParticleType": "Leaves",
-		"Providers": [
-			"/Script/CoreUObject.Class'/Script/Stalker2.NiagaraWindIntensityDirectionProvider'",
-			"/Script/CoreUObject.Class'/Script/Stalker2.NiagaraTerrainOffsetProvider'"
-		],
-		"bCanSpawnOnWater": false,
-		"bStopOnCutscene": false,
-		"IndoorSpawnPrototype":
-		{
-			"IgnoredAudioRoomPresets": [
-				"GlobalExterior"
-			],
-			"ForbiddenBandwidthTypes": [
-				"Close",
-				"HalfOpen",
-				"Isolated",
-				"Custom"
-			],
-			"MinDistanceToAudioVolume": 0
-		},
-		"BiomeSpawnPrototype":
-		{
-			"AllowedBiomeNames": [
-				"Pine Forest",
-				"Forest steppe",
-				"Burned Forest",
-				"Red Forest",
-				"Decidious"
-			],
-			"CountableBiomeNames": [
-				"Red Forest"
-			],
-			"BiomeCheckRadius": 100,
-			"MinBiomeCompatabilityPercent": 0.5
-		},
-		"PlayerDistancePrototype":
-		{
-			"MaxDistance": 10000
-		},
-		"WindIntensityPrototype":
-		{
-			"AllowedWindIntensityInterval":
-			{
-				"Min": 0,
-				"Max": 1
-			}
-		},
-		"ActorSpawnPrototypes":
-		{
-		},
-		"PlayerComponentSpawnPrototypes":
-		{
-		},
-		"ActorComponentSpawnPrototypes":
-		{
-			"Stormy":
-			{
-				"ActorSpawnPrototype":
-				{
-					"BaseSpawnProbability": 0.3,
-					"SpawnProbabilityIncrement": 0.1,
-					"SpawnProbabilityCheckTime": 10,
-					"MinSpawnDistance": 2000,
-					"MaxSpawnDistance": 4000,
-					"SurfaceHeightOffset": 1,
-					"LocationCheckTime": 5,
-					"MaxParticleCount": 1,
-					"bSpawnInPlayerViewport": true
-				},
-				"PlayerComponentSpawnPrototype":
-				{
-					"BaseSpawnProbability": 0.4,
-					"SpawnProbabilityIncrement": 0.15,
-					"SpawnProbabilityCheckTime": 2,
-					"LocationCheckTime": 1,
-					"PlayerHeadOffset":
-					{
-						"X": 0,
-						"Y": 0,
-						"Z": 0
-					}
-				}
-			},
-			"Cloudy":
-			{
-				"ActorSpawnPrototype":
-				{
-					"BaseSpawnProbability": 0.5,
-					"SpawnProbabilityIncrement": 0.1,
-					"SpawnProbabilityCheckTime": 10,
-					"MinSpawnDistance": 2000,
-					"MaxSpawnDistance": 5000,
-					"SurfaceHeightOffset": 10,
-					"LocationCheckTime": 0,
-					"MaxParticleCount": 2,
-					"bSpawnInPlayerViewport": true
-				},
-				"PlayerComponentSpawnPrototype":
-				{
-					"BaseSpawnProbability": 0.3,
-					"SpawnProbabilityIncrement": 0.1,
-					"SpawnProbabilityCheckTime": 3,
-					"LocationCheckTime": 5,
-					"PlayerHeadOffset":
-					{
-						"X": 0,
-						"Y": 0,
-						"Z": 0
-					}
-				}
-			},
-			"Fogy":
-			{
-				"ActorSpawnPrototype":
-				{
-					"BaseSpawnProbability": 0.3,
-					"SpawnProbabilityIncrement": 0.1,
-					"SpawnProbabilityCheckTime": 10,
-					"MinSpawnDistance": 0,
-					"MaxSpawnDistance": 0,
-					"SurfaceHeightOffset": 1,
-					"LocationCheckTime": 0,
-					"MaxParticleCount": 1,
-					"bSpawnInPlayerViewport": true
-				},
-				"PlayerComponentSpawnPrototype":
-				{
-					"BaseSpawnProbability": 0.3,
-					"SpawnProbabilityIncrement": 0.1,
-					"SpawnProbabilityCheckTime": 5,
-					"LocationCheckTime": 5,
-					"PlayerHeadOffset":
-					{
-						"X": 0,
-						"Y": 0,
-						"Z": 0
-					}
-				}
-			},
-			"LightRainy":
-			{
-				"ActorSpawnPrototype":
-				{
-					"BaseSpawnProbability": 0.3,
-					"SpawnProbabilityIncrement": 0.1,
-					"SpawnProbabilityCheckTime": 10,
-					"MinSpawnDistance": 2000,
-					"MaxSpawnDistance": 4000,
-					"SurfaceHeightOffset": 1,
-					"LocationCheckTime": 0,
-					"MaxParticleCount": 3,
-					"bSpawnInPlayerViewport": true
-				},
-				"PlayerComponentSpawnPrototype":
-				{
-					"BaseSpawnProbability": 0.3,
-					"SpawnProbabilityIncrement": 0.1,
-					"SpawnProbabilityCheckTime": 5,
-					"LocationCheckTime": 5,
-					"PlayerHeadOffset":
-					{
-						"X": 0,
-						"Y": 0,
-						"Z": 0
-					}
-				}
-			},
-			"Rainy":
-			{
-				"ActorSpawnPrototype":
-				{
-					"BaseSpawnProbability": 0.3,
-					"SpawnProbabilityIncrement": 0.1,
-					"SpawnProbabilityCheckTime": 10,
-					"MinSpawnDistance": 2000,
-					"MaxSpawnDistance": 4000,
-					"SurfaceHeightOffset": 1,
-					"LocationCheckTime": 0,
-					"MaxParticleCount": 2,
-					"bSpawnInPlayerViewport": true
-				},
-				"PlayerComponentSpawnPrototype":
-				{
-					"BaseSpawnProbability": 0.3,
-					"SpawnProbabilityIncrement": 0.1,
-					"SpawnProbabilityCheckTime": 5,
-					"LocationCheckTime": 5,
-					"PlayerHeadOffset":
-					{
-						"X": 0,
-						"Y": 0,
-						"Z": 0
-					}
-				}
-			},
-			"Thundery":
-			{
-				"ActorSpawnPrototype":
-				{
-					"BaseSpawnProbability": 0.3,
-					"SpawnProbabilityIncrement": 0.1,
-					"SpawnProbabilityCheckTime": 10,
-					"MinSpawnDistance": 2000,
-					"MaxSpawnDistance": 4000,
-					"SurfaceHeightOffset": 1,
-					"LocationCheckTime": 0,
-					"MaxParticleCount": 1,
-					"bSpawnInPlayerViewport": true
-				},
-				"PlayerComponentSpawnPrototype":
-				{
-					"BaseSpawnProbability": 0.3,
-					"SpawnProbabilityIncrement": 0.1,
-					"SpawnProbabilityCheckTime": 5,
-					"LocationCheckTime": 5,
-					"PlayerHeadOffset":
-					{
-						"X": 0,
-						"Y": 0,
-						"Z": 0
-					}
-				}
-			},
-			"Emission":
-			{
-				"ActorSpawnPrototype":
-				{
-					"BaseSpawnProbability": 0.3,
-					"SpawnProbabilityIncrement": 0.1,
-					"SpawnProbabilityCheckTime": 10,
-					"MinSpawnDistance": 2000,
-					"MaxSpawnDistance": 4000,
-					"SurfaceHeightOffset": 1,
-					"LocationCheckTime": 5,
-					"MaxParticleCount": 1,
-					"bSpawnInPlayerViewport": true
-				},
-				"PlayerComponentSpawnPrototype":
-				{
-					"BaseSpawnProbability": 0.4,
-					"SpawnProbabilityIncrement": 0.15,
-					"SpawnProbabilityCheckTime": 4,
-					"LocationCheckTime": 0,
-					"PlayerHeadOffset":
-					{
-						"X": 0,
-						"Y": 0,
-						"Z": 0
-					}
-				}
-			},
-			"CalmBeforeEmission":
-			{
-				"ActorSpawnPrototype":
-				{
-					"BaseSpawnProbability": 0.3,
-					"SpawnProbabilityIncrement": 0.1,
-					"SpawnProbabilityCheckTime": 10,
-					"MinSpawnDistance": 2000,
-					"MaxSpawnDistance": 4000,
-					"SurfaceHeightOffset": 1,
-					"LocationCheckTime": 0,
-					"MaxParticleCount": 1,
-					"bSpawnInPlayerViewport": true
-				},
-				"PlayerComponentSpawnPrototype":
-				{
-					"BaseSpawnProbability": 0.4,
-					"SpawnProbabilityIncrement": 0.15,
-					"SpawnProbabilityCheckTime": 4,
-					"LocationCheckTime": 0,
-					"PlayerHeadOffset":
-					{
-						"X": 0,
-						"Y": 0,
-						"Z": 0
-					}
-				}
-			},
-			"Clearly":
-			{
-				"ActorSpawnPrototype":
-				{
-					"BaseSpawnProbability": 0.5,
-					"SpawnProbabilityIncrement": 0.1,
-					"SpawnProbabilityCheckTime": 10,
-					"MinSpawnDistance": 2000,
-					"MaxSpawnDistance": 5000,
-					"SurfaceHeightOffset": 10,
-					"LocationCheckTime": 0,
-					"MaxParticleCount": 2,
-					"bSpawnInPlayerViewport": true
-				},
-				"PlayerComponentSpawnPrototype":
-				{
-					"BaseSpawnProbability": 0.3,
-					"SpawnProbabilityIncrement": 0.1,
-					"SpawnProbabilityCheckTime": 3,
-					"LocationCheckTime": 5,
-					"PlayerHeadOffset":
-					{
-						"X": 0,
-						"Y": 0,
-						"Z": 0
-					}
-				}
-			}
-		},
-		"ActorParticleVFXes": [
-			"/Game/_Stalker_2/VFX/Environment/Leaves/NS_GroundLeaves_1.NS_GroundLeaves_1",
-			"/Game/_Stalker_2/VFX/Environment/Leaves/NS_GroundLeaves_2.NS_GroundLeaves_2",
-			"/Game/_Stalker_2/VFX/Environment/Leaves/NS_GroundLeaves_3.NS_GroundLeaves_3"
-		],
-		"PlayerParticleVFX": "/Game/_Stalker_2/VFX/Player/NS_Leaves_Player.NS_Leaves_Player",
-		"LightningStrikeVFX":
-		{
-			"LightningStrikeDefault": "None",
-			"LightningStrikeMetal":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			},
-			"LightningStrikeWater":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			},
-			"LightningStrikeWood":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			}
-		},
-		"LightningStrikeDamagePrototype":
-		{
-			"PlayerHitProbability": 0,
-			"PlayerHitCheckTime": 0,
-			"HeightPriorityRadius": 1,
-			"HeightPriorityUsageProbability": 0,
-			"PlayerHitEffects": [],
-			"NPCHitEffects": []
-		}
-	},
-	{
-		"Name": "BogFlies",
-		"ParticleType": "BogFlies",
-		"Providers": [],
-		"bCanSpawnOnWater": false,
-		"bStopOnCutscene": false,
-		"IndoorSpawnPrototype":
-		{
-			"IgnoredAudioRoomPresets": [
-				"GlobalExterior"
-			],
-			"ForbiddenBandwidthTypes": [
-				"Close",
-				"HalfOpen",
-				"Isolated",
-				"Custom"
-			],
-			"MinDistanceToAudioVolume": 0
-		},
-		"BiomeSpawnPrototype":
-		{
-			"AllowedBiomeNames": [
-				"Swamp",
-				"Landfill"
-			],
-			"CountableBiomeNames": [],
-			"BiomeCheckRadius": 5,
-			"MinBiomeCompatabilityPercent": 0.3
-		},
-		"PlayerDistancePrototype":
-		{
-			"MaxDistance": 1000
-		},
-		"WindIntensityPrototype":
-		{
-			"AllowedWindIntensityInterval":
-			{
-				"Min": 0,
-				"Max": 0.5
-			}
-		},
-		"ActorSpawnPrototypes":
-		{
-		},
-		"PlayerComponentSpawnPrototypes":
-		{
-			"Fogy":
-			{
-				"BaseSpawnProbability": 0.6,
-				"SpawnProbabilityIncrement": 0.1,
-				"SpawnProbabilityCheckTime": 10,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 0
-				}
-			},
-			"Cloudy":
-			{
-				"BaseSpawnProbability": 0.7,
-				"SpawnProbabilityIncrement": 0.1,
-				"SpawnProbabilityCheckTime": 10,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 0
-				}
-			},
-			"LightRainy":
-			{
-				"BaseSpawnProbability": 0.1,
-				"SpawnProbabilityIncrement": 0.1,
-				"SpawnProbabilityCheckTime": 10,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 0
-				}
-			},
-			"Clearly":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 0.1,
-				"SpawnProbabilityCheckTime": 10,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 0
-				}
-			}
-		},
-		"ActorComponentSpawnPrototypes":
-		{
-		},
-		"ActorParticleVFXes": [],
-		"PlayerParticleVFX": "/Game/_Stalker_2/VFX/Player/NS_Character_Flies.NS_Character_Flies",
-		"LightningStrikeVFX":
-		{
-			"LightningStrikeDefault": "None",
-			"LightningStrikeMetal":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			},
-			"LightningStrikeWater":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			},
-			"LightningStrikeWood":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			}
-		},
-		"LightningStrikeDamagePrototype":
-		{
-			"PlayerHitProbability": 0,
-			"PlayerHitCheckTime": 0,
-			"HeightPriorityRadius": 1,
-			"HeightPriorityUsageProbability": 0,
-			"PlayerHitEffects": [],
-			"NPCHitEffects": []
-		}
-	},
-	{
-		"Name": "Dust",
-		"ParticleType": "DynamicDust",
-		"Providers": [
-			"/Script/CoreUObject.Class'/Script/Stalker2.NiagaraWindIntensityDirectionProvider'",
-			"/Script/CoreUObject.Class'/Script/Stalker2.NiagaraTerrainOffsetProvider'",
-			"/Script/CoreUObject.Class'/Script/Stalker2.NiagaraTimeOfDayNormalizedProvider'"
-		],
-		"bCanSpawnOnWater": false,
-		"bStopOnCutscene": false,
-		"IndoorSpawnPrototype":
-		{
-			"IgnoredAudioRoomPresets": [
-				"GlobalExterior"
-			],
-			"ForbiddenBandwidthTypes": [
-				"Close",
-				"HalfOpen",
-				"Isolated",
-				"Custom"
-			],
-			"MinDistanceToAudioVolume": 0
-		},
-		"BiomeSpawnPrototype":
-		{
-			"AllowedBiomeNames": [],
-			"CountableBiomeNames": [],
-			"BiomeCheckRadius": 1,
-			"MinBiomeCompatabilityPercent": 0
-		},
-		"PlayerDistancePrototype":
-		{
-			"MaxDistance": 0
-		},
-		"WindIntensityPrototype":
-		{
-			"AllowedWindIntensityInterval":
-			{
-				"Min": 0,
-				"Max": 1
-			}
-		},
-		"ActorSpawnPrototypes":
-		{
-		},
-		"PlayerComponentSpawnPrototypes":
-		{
-			"Clearly":
-			{
-				"BaseSpawnProbability": 0.2,
-				"SpawnProbabilityIncrement": 0.1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 0
-				}
-			},
-			"Cloudy":
-			{
-				"BaseSpawnProbability": 0.2,
-				"SpawnProbabilityIncrement": 0.15,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 0
-				}
-			},
-			"CalmBeforeEmission":
-			{
-				"BaseSpawnProbability": 0.4,
-				"SpawnProbabilityIncrement": 0.2,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 0
-				}
-			},
-			"Stormy":
-			{
-				"BaseSpawnProbability": 0.3,
-				"SpawnProbabilityIncrement": 0.15,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 0
-				}
-			},
-			"Emission":
-			{
-				"BaseSpawnProbability": 0.4,
-				"SpawnProbabilityIncrement": 0.2,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 0
-				}
-			}
-		},
-		"ActorComponentSpawnPrototypes":
-		{
-		},
-		"ActorParticleVFXes": [],
-		"PlayerParticleVFX": "/Game/_Stalker_2/VFX/Player/NS_Character_Dust.NS_Character_Dust",
-		"LightningStrikeVFX":
-		{
-			"LightningStrikeDefault": "None",
-			"LightningStrikeMetal":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			},
-			"LightningStrikeWater":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			},
-			"LightningStrikeWood":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			}
-		},
-		"LightningStrikeDamagePrototype":
-		{
-			"PlayerHitProbability": 0,
-			"PlayerHitCheckTime": 0,
-			"HeightPriorityRadius": 1,
-			"HeightPriorityUsageProbability": 0,
-			"PlayerHitEffects": [],
-			"NPCHitEffects": []
-		}
-	},
-	{
-		"Name": "FlyingCrows",
-		"ParticleType": "FlyingCrowsAndBats",
-		"Providers": [
-			"/Script/CoreUObject.Class'/Script/Stalker2.NiagaraTimeOfDayNormalizedProvider'"
-		],
-		"bCanSpawnOnWater": false,
-		"bStopOnCutscene": false,
-		"IndoorSpawnPrototype":
-		{
-			"IgnoredAudioRoomPresets": [
-				"GlobalExterior"
-			],
-			"ForbiddenBandwidthTypes": [
-				"Close",
-				"HalfOpen",
-				"Isolated"
-			],
-			"MinDistanceToAudioVolume": 100
-		},
-		"BiomeSpawnPrototype":
-		{
-			"AllowedBiomeNames": [],
-			"CountableBiomeNames": [],
-			"BiomeCheckRadius": 1,
-			"MinBiomeCompatabilityPercent": 0
-		},
-		"PlayerDistancePrototype":
-		{
-			"MaxDistance": 20000
-		},
-		"WindIntensityPrototype":
-		{
-			"AllowedWindIntensityInterval":
-			{
-				"Min": 0,
-				"Max": 1
-			}
-		},
-		"ActorSpawnPrototypes":
-		{
-			"Rainy":
-			{
-				"BaseSpawnProbability": 0.1,
-				"SpawnProbabilityIncrement": 0.1,
-				"SpawnProbabilityCheckTime": 25,
-				"MinSpawnDistance": 0,
-				"MaxSpawnDistance": 0,
-				"SurfaceHeightOffset": 0,
-				"LocationCheckTime": 0,
-				"MaxParticleCount": 1,
-				"bSpawnInPlayerViewport": false
-			},
-			"LightRainy":
-			{
-				"BaseSpawnProbability": 0.3,
-				"SpawnProbabilityIncrement": 0.3,
-				"SpawnProbabilityCheckTime": 20,
-				"MinSpawnDistance": 0,
-				"MaxSpawnDistance": 0,
-				"SurfaceHeightOffset": 0,
-				"LocationCheckTime": 0,
-				"MaxParticleCount": 1,
-				"bSpawnInPlayerViewport": true
-			},
-			"Fogy":
-			{
-				"BaseSpawnProbability": 0.5,
-				"SpawnProbabilityIncrement": 0.5,
-				"SpawnProbabilityCheckTime": 10,
-				"MinSpawnDistance": 0,
-				"MaxSpawnDistance": 0,
-				"SurfaceHeightOffset": 0,
-				"LocationCheckTime": 0,
-				"MaxParticleCount": 1,
-				"bSpawnInPlayerViewport": true
-			},
-			"Cloudy":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 5,
-				"MinSpawnDistance": 0,
-				"MaxSpawnDistance": 0,
-				"SurfaceHeightOffset": 0,
-				"LocationCheckTime": 0,
-				"MaxParticleCount": 1,
-				"bSpawnInPlayerViewport": false
-			},
-			"Clearly":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 1,
-				"MinSpawnDistance": 0,
-				"MaxSpawnDistance": 0,
-				"SurfaceHeightOffset": 0,
-				"LocationCheckTime": 0,
-				"MaxParticleCount": 1,
-				"bSpawnInPlayerViewport": false
-			}
-		},
-		"PlayerComponentSpawnPrototypes":
-		{
-		},
-		"ActorComponentSpawnPrototypes":
-		{
-		},
-		"ActorParticleVFXes": [
-			"/Game/_Stalker_2/VFX/Player/NS_Character_Crow.NS_Character_Crow"
-		],
-		"PlayerParticleVFX": "None",
-		"LightningStrikeVFX":
-		{
-			"LightningStrikeDefault": "None",
-			"LightningStrikeMetal":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			},
-			"LightningStrikeWater":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			},
-			"LightningStrikeWood":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			}
-		},
-		"LightningStrikeDamagePrototype":
-		{
-			"PlayerHitProbability": 0,
-			"PlayerHitCheckTime": 0,
-			"HeightPriorityRadius": 1,
-			"HeightPriorityUsageProbability": 0,
-			"PlayerHitEffects": [],
-			"NPCHitEffects": []
-		}
-	},
-	{
-		"Name": "Rainbow",
-		"ParticleType": "Rainbow",
-		"Providers": [
-			"/Script/CoreUObject.Class'/Script/Stalker2.NiagaraTimeOfDayNormalizedProvider'",
-			"/Script/CoreUObject.Class'/Script/Stalker2.NiagaraTerrainOffsetProvider'",
-			"/Script/CoreUObject.Class'/Script/Stalker2.NiagaraSunRotationProvider'",
-			"/Script/CoreUObject.Class'/Script/Stalker2.NiagaraRainbowOpacityProvider'"
-		],
-		"bCanSpawnOnWater": false,
-		"bStopOnCutscene": false,
-		"IndoorSpawnPrototype":
-		{
-			"IgnoredAudioRoomPresets": [],
-			"ForbiddenBandwidthTypes": [],
-			"MinDistanceToAudioVolume": 0
-		},
-		"BiomeSpawnPrototype":
-		{
-			"AllowedBiomeNames": [],
-			"CountableBiomeNames": [],
-			"BiomeCheckRadius": 1,
-			"MinBiomeCompatabilityPercent": 0
-		},
-		"PlayerDistancePrototype":
-		{
-			"MaxDistance": 0
-		},
-		"WindIntensityPrototype":
-		{
-			"AllowedWindIntensityInterval":
-			{
-				"Min": 0,
-				"Max": 1
-			}
-		},
-		"ActorSpawnPrototypes":
-		{
-		},
-		"PlayerComponentSpawnPrototypes":
-		{
-			"LightRainy":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 0
-				}
-			}
-		},
-		"ActorComponentSpawnPrototypes":
-		{
-		},
-		"ActorParticleVFXes": [],
-		"PlayerParticleVFX": "/Game/_Stalker_2/VFX/Environment/Rainbow/NS_Dyn_Rainbow_Weather.NS_Dyn_Rainbow_Weather",
-		"LightningStrikeVFX":
-		{
-			"LightningStrikeDefault": "None",
-			"LightningStrikeMetal":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			},
-			"LightningStrikeWater":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			},
-			"LightningStrikeWood":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			}
-		},
-		"LightningStrikeDamagePrototype":
-		{
-			"PlayerHitProbability": 0,
-			"PlayerHitCheckTime": 0,
-			"HeightPriorityRadius": 1,
-			"HeightPriorityUsageProbability": 0,
-			"PlayerHitEffects": [],
-			"NPCHitEffects": []
-		}
-	},
-	{
-		"Name": "WeatherLightning",
-		"ParticleType": "WeatherLightning",
-		"Providers": [
-			"/Script/CoreUObject.Class'/Script/Stalker2.NiagaraWindIntensityDirectionProvider'",
-			"/Script/CoreUObject.Class'/Script/Stalker2.NiagaraPlayerLocationProvider'",
-			"/Script/CoreUObject.Class'/Script/Stalker2.NiagaraLightningDataProvider'"
-		],
-		"bCanSpawnOnWater": false,
-		"bStopOnCutscene": false,
-		"IndoorSpawnPrototype":
-		{
-			"IgnoredAudioRoomPresets": [],
-			"ForbiddenBandwidthTypes": [],
-			"MinDistanceToAudioVolume": 0
-		},
-		"BiomeSpawnPrototype":
-		{
-			"AllowedBiomeNames": [],
-			"CountableBiomeNames": [],
-			"BiomeCheckRadius": 1,
-			"MinBiomeCompatabilityPercent": 0
-		},
-		"PlayerDistancePrototype":
-		{
-			"MaxDistance": 0
-		},
-		"WindIntensityPrototype":
-		{
-			"AllowedWindIntensityInterval":
-			{
-				"Min": 0,
-				"Max": 1
-			}
-		},
-		"ActorSpawnPrototypes":
-		{
-		},
-		"PlayerComponentSpawnPrototypes":
-		{
-			"Rainy":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			},
-			"CalmBeforeEmission":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			},
-			"Thundery":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			},
-			"Cloudy":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			},
-			"Fogy":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			},
-			"Stormy":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			},
-			"LightRainy":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			},
-			"Clearly":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			}
-		},
-		"ActorComponentSpawnPrototypes":
-		{
-		},
-		"ActorParticleVFXes": [],
-		"PlayerParticleVFX": "/DynamicWeatherOverhaul/_Stalker_2/VFX/Environment/Rain/Niagara/NS_Dyn_Lightning_Weather.NS_Dyn_Lightning_Weather",
-		"LightningStrikeVFX":
-		{
-			"LightningStrikeDefault": "None",
-			"LightningStrikeMetal":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			},
-			"LightningStrikeWater":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			},
-			"LightningStrikeWood":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			}
-		},
-		"LightningStrikeDamagePrototype":
-		{
-			"PlayerHitProbability": 0,
-			"PlayerHitCheckTime": 0,
-			"HeightPriorityRadius": 1,
-			"HeightPriorityUsageProbability": 0,
-			"PlayerHitEffects": [],
-			"NPCHitEffects": []
-		}
-	},
-	{
-		"Name": "WeatherRain",
-		"ParticleType": "WeatherRain",
-		"Providers": [
-			"/Script/CoreUObject.Class'/Script/Stalker2.NiagaraWindIntensityDirectionProvider'",
-			"/Script/CoreUObject.Class'/Script/Stalker2.NiagaraPlayerLocationProvider'",
-			"/Script/CoreUObject.Class'/Script/Stalker2.NiagaraRainIntensityProvider'"
-		],
-		"bCanSpawnOnWater": false,
-		"bStopOnCutscene": false,
-		"IndoorSpawnPrototype":
-		{
-			"IgnoredAudioRoomPresets": [],
-			"ForbiddenBandwidthTypes": [],
-			"MinDistanceToAudioVolume": 0
-		},
-		"BiomeSpawnPrototype":
-		{
-			"AllowedBiomeNames": [],
-			"CountableBiomeNames": [],
-			"BiomeCheckRadius": 1,
-			"MinBiomeCompatabilityPercent": 0
-		},
-		"PlayerDistancePrototype":
-		{
-			"MaxDistance": 0
-		},
-		"WindIntensityPrototype":
-		{
-			"AllowedWindIntensityInterval":
-			{
-				"Min": 0,
-				"Max": 1
-			}
-		},
-		"ActorSpawnPrototypes":
-		{
-		},
-		"PlayerComponentSpawnPrototypes":
-		{
-			"Rainy":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			},
-			"Emission":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			},
-			"CalmBeforeEmission":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			},
-			"Thundery":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			},
-			"Cloudy":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			},
-			"Fogy":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			},
-			"Stormy":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			},
-			"LightRainy":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			},
-			"Clearly":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			}
-		},
-		"ActorComponentSpawnPrototypes":
-		{
-		},
-		"ActorParticleVFXes": [],
-		"PlayerParticleVFX": "/DynamicWeatherOverhaul/_Stalker_2/VFX/Environment/Rain/Niagara/NS_Dyn_Rain_Weather.NS_Dyn_Rain_Weather",
-		"LightningStrikeVFX":
-		{
-			"LightningStrikeDefault": "None",
-			"LightningStrikeMetal":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			},
-			"LightningStrikeWater":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			},
-			"LightningStrikeWood":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			}
-		},
-		"LightningStrikeDamagePrototype":
-		{
-			"PlayerHitProbability": 0,
-			"PlayerHitCheckTime": 0,
-			"HeightPriorityRadius": 1,
-			"HeightPriorityUsageProbability": 0,
-			"PlayerHitEffects": [],
-			"NPCHitEffects": []
-		}
-	},
-	{
-		"Name": "WeatherStormyLeaves",
-		"ParticleType": "WeatherStormyLeaves",
-		"Providers": [
-			"/Script/CoreUObject.Class'/Script/Stalker2.NiagaraTerrainOffsetProvider'",
-			"/Script/CoreUObject.Class'/Script/Stalker2.NiagaraWindIntensityDirectionProvider'",
-			"/Script/CoreUObject.Class'/Script/Stalker2.NiagaraPlayerLocationProvider'",
-			"/Script/CoreUObject.Class'/Script/Stalker2.NiagaraStormSpawnRateProvider'"
-		],
-		"bCanSpawnOnWater": false,
-		"bStopOnCutscene": false,
-		"IndoorSpawnPrototype":
-		{
-			"IgnoredAudioRoomPresets": [],
-			"ForbiddenBandwidthTypes": [],
-			"MinDistanceToAudioVolume": 0
-		},
-		"BiomeSpawnPrototype":
-		{
-			"AllowedBiomeNames": [],
-			"CountableBiomeNames": [],
-			"BiomeCheckRadius": 1,
-			"MinBiomeCompatabilityPercent": 0
-		},
-		"PlayerDistancePrototype":
-		{
-			"MaxDistance": 0
-		},
-		"WindIntensityPrototype":
-		{
-			"AllowedWindIntensityInterval":
-			{
-				"Min": 0,
-				"Max": 1
-			}
-		},
-		"ActorSpawnPrototypes":
-		{
-		},
-		"PlayerComponentSpawnPrototypes":
-		{
-			"Rainy":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			},
-			"Emission":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			},
-			"CalmBeforeEmission":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			},
-			"Thundery":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			},
-			"Cloudy":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			},
-			"Fogy":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			},
-			"Stormy":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			},
-			"LightRainy":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			},
-			"Clearly":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			}
-		},
-		"ActorComponentSpawnPrototypes":
-		{
-		},
-		"ActorParticleVFXes": [],
-		"PlayerParticleVFX": "/DynamicWeatherOverhaul/_Stalker_2/VFX/Environment/Rain/Niagara/NS_Dyn_Storm_Weather.NS_Dyn_Storm_Weather",
-		"LightningStrikeVFX":
-		{
-			"LightningStrikeDefault": "None",
-			"LightningStrikeMetal":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			},
-			"LightningStrikeWater":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			},
-			"LightningStrikeWood":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			}
-		},
-		"LightningStrikeDamagePrototype":
-		{
-			"PlayerHitProbability": 0,
-			"PlayerHitCheckTime": 0,
-			"HeightPriorityRadius": 1,
-			"HeightPriorityUsageProbability": 0,
-			"PlayerHitEffects": [],
-			"NPCHitEffects": []
-		}
-	},
-	{
-		"Name": "WeatherLightning_Emission",
-		"ParticleType": "WeatherLightning",
-		"Providers": [
-			"/Script/CoreUObject.Class'/Script/Stalker2.NiagaraWindIntensityDirectionProvider'",
-			"/Script/CoreUObject.Class'/Script/Stalker2.NiagaraPlayerLocationProvider'",
-			"/Script/CoreUObject.Class'/Script/Stalker2.NiagaraLightningDataProvider'"
-		],
-		"bCanSpawnOnWater": false,
-		"bStopOnCutscene": false,
-		"IndoorSpawnPrototype":
-		{
-			"IgnoredAudioRoomPresets": [],
-			"ForbiddenBandwidthTypes": [],
-			"MinDistanceToAudioVolume": 0
-		},
-		"BiomeSpawnPrototype":
-		{
-			"AllowedBiomeNames": [],
-			"CountableBiomeNames": [],
-			"BiomeCheckRadius": 1,
-			"MinBiomeCompatabilityPercent": 0
-		},
-		"PlayerDistancePrototype":
-		{
-			"MaxDistance": 0
-		},
-		"WindIntensityPrototype":
-		{
-			"AllowedWindIntensityInterval":
-			{
-				"Min": 0,
-				"Max": 1
-			}
-		},
-		"ActorSpawnPrototypes":
-		{
-		},
-		"PlayerComponentSpawnPrototypes":
-		{
-			"Emission":
-			{
-				"BaseSpawnProbability": 1,
-				"SpawnProbabilityIncrement": 1,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 2000
-				}
-			}
-		},
-		"ActorComponentSpawnPrototypes":
-		{
-		},
-		"ActorParticleVFXes": [],
-		"PlayerParticleVFX": "/DynamicWeatherOverhaul/_Stalker_2/VFX/Environment/Rain/Niagara/NS_Dyn_Lightning_Weather_Emission.NS_Dyn_Lightning_Weather_Emission",
-		"LightningStrikeVFX":
-		{
-			"LightningStrikeDefault": "None",
-			"LightningStrikeMetal":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			},
-			"LightningStrikeWater":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			},
-			"LightningStrikeWood":
-			{
-				"NiagaraSystem": "None",
-				"PhysicalMaterialTypes": []
-			}
-		},
-		"LightningStrikeDamagePrototype":
-		{
-			"PlayerHitProbability": 0,
-			"PlayerHitCheckTime": 0,
-			"HeightPriorityRadius": 1,
-			"HeightPriorityUsageProbability": 0,
-			"PlayerHitEffects": [],
-			"NPCHitEffects": []
-		}
-	},
-	{
-		"Name": "LightningStrike_Emission",
-		"ParticleType": "LightningStrike",
-		"Providers": [
-			"/Script/CoreUObject.Class'/Script/Stalker2.NiagaraWindIntensityDirectionProvider'"
-		],
-		"bCanSpawnOnWater": true,
-		"bStopOnCutscene": true,
-		"IndoorSpawnPrototype":
-		{
-			"IgnoredAudioRoomPresets": [
-				"GlobalExterior"
-			],
-			"ForbiddenBandwidthTypes": [
-				"Close",
-				"HalfOpen",
-				"Isolated",
-				"Custom"
-			],
-			"MinDistanceToAudioVolume": 500
-		},
-		"BiomeSpawnPrototype":
-		{
-			"AllowedBiomeNames": [
-				"Decidious"
-			],
-			"CountableBiomeNames": [],
-			"BiomeCheckRadius": 1,
-			"MinBiomeCompatabilityPercent": 0
-		},
-		"PlayerDistancePrototype":
-		{
-			"MaxDistance": 0
-		},
-		"WindIntensityPrototype":
-		{
-			"AllowedWindIntensityInterval":
-			{
-				"Min": 0,
-				"Max": 1
-			}
-		},
-		"ActorSpawnPrototypes":
-		{
-			"Emission":
-			{
-				"BaseSpawnProbability": 0.15,
-				"SpawnProbabilityIncrement": 0.35,
-				"SpawnProbabilityCheckTime": 7,
-				"MinSpawnDistance": 150,
-				"MaxSpawnDistance": 10000,
-				"SurfaceHeightOffset": 1,
-				"LocationCheckTime": 5,
-				"MaxParticleCount": 2,
-				"bSpawnInPlayerViewport": true
-			}
-		},
-		"PlayerComponentSpawnPrototypes":
-		{
-		},
-		"ActorComponentSpawnPrototypes":
-		{
-		},
-		"ActorParticleVFXes": [],
-		"PlayerParticleVFX": "None",
-		"LightningStrikeVFX":
-		{
-			"LightningStrikeDefault": "/DynamicWeatherOverhaul/_Stalker_2/VFX/Environment/LightningStrike/EmissionStrikes/NS_LightningStrike_Ground_Emission.NS_LightningStrike_Ground_Emission",
-			"LightningStrikeMetal":
-			{
-				"NiagaraSystem": "/DynamicWeatherOverhaul/_Stalker_2/VFX/Environment/LightningStrike/EmissionStrikes/NS_LightningStrike_Metal_Emission.NS_LightningStrike_Metal_Emission",
-				"PhysicalMaterialTypes": [
-					"MetalThin",
-					"MetalSolid",
-					"MetalGrid"
-				]
-			},
-			"LightningStrikeWater":
-			{
-				"NiagaraSystem": "/DynamicWeatherOverhaul/_Stalker_2/VFX/Environment/LightningStrike/EmissionStrikes/NS_LightningStrike_Water_Emission.NS_LightningStrike_Water_Emission",
-				"PhysicalMaterialTypes": [
-					"Water"
-				]
-			},
-			"LightningStrikeWood":
-			{
-				"NiagaraSystem": "/DynamicWeatherOverhaul/_Stalker_2/VFX/Environment/LightningStrike/EmissionStrikes/NS_LightningStrike_Tree_Emission.NS_LightningStrike_Tree_Emission",
-				"PhysicalMaterialTypes": [
-					"WoodThin",
-					"WoodSolid",
-					"Slate"
-				]
-			}
-		},
-		"LightningStrikeDamagePrototype":
-		{
-			"PlayerHitProbability": 0.1,
-			"PlayerHitCheckTime": 9000,
-			"HeightPriorityRadius": 500,
-			"HeightPriorityUsageProbability": 0.5,
-			"PlayerHitEffects": [
-				{
-					"EffectSID":
-					{
-						"Value": "LightningStrikeHitPlayer"
-					}
-				},
-				{
-					"EffectSID":
-					{
-						"Value": "ElectroIntensityPostProcess"
-					}
-				}
-			],
-			"NPCHitEffects": [
-				{
-					"EffectSID":
-					{
-						"Value": "LightningStrikeHitNPC"
-					}
-				}
-			]
-		}
-	}
+  {
+    "Name": "LightningStrike",
+    "ParticleType": "LightningStrike",
+    "Providers": ["/Script/CoreUObject.Class'/Script/Stalker2.NiagaraWindIntensityDirectionProvider'"],
+    "bCanSpawnOnWater": true,
+    "bStopOnCutscene": true,
+    "IndoorSpawnPrototype": {
+      "IgnoredAudioRoomPresets": ["GlobalExterior"],
+      "ForbiddenBandwidthTypes": ["Close", "HalfOpen", "Isolated", "Custom"],
+      "MinDistanceToAudioVolume": 500
+    },
+    "BiomeSpawnPrototype": {
+      "AllowedBiomeNames": ["Decidious"],
+      "CountableBiomeNames": [],
+      "BiomeCheckRadius": 1,
+      "MinBiomeCompatabilityPercent": 0
+    },
+    "PlayerDistancePrototype": {
+      "MaxDistance": 0
+    },
+    "WindIntensityPrototype": {
+      "AllowedWindIntensityInterval": {
+        "Min": 0,
+        "Max": 1
+      }
+    },
+    "ActorSpawnPrototypes": {
+      "Thundery": {
+        "BaseSpawnProbability": 0.1,
+        "SpawnProbabilityIncrement": 0.05,
+        "SpawnProbabilityCheckTime": 20,
+        "MinSpawnDistance": 500,
+        "MaxSpawnDistance": 10000,
+        "SurfaceHeightOffset": 1,
+        "LocationCheckTime": 5,
+        "MaxParticleCount": 1,
+        "bSpawnInPlayerViewport": true
+      },
+      "Emission": {
+        "BaseSpawnProbability": 0.15,
+        "SpawnProbabilityIncrement": 0.35,
+        "SpawnProbabilityCheckTime": 7,
+        "MinSpawnDistance": 150,
+        "MaxSpawnDistance": 10000,
+        "SurfaceHeightOffset": 1,
+        "LocationCheckTime": 5,
+        "MaxParticleCount": 2,
+        "bSpawnInPlayerViewport": true
+      },
+      "CalmBeforeEmission": {
+        "BaseSpawnProbability": 0.1,
+        "SpawnProbabilityIncrement": 0.1,
+        "SpawnProbabilityCheckTime": 15,
+        "MinSpawnDistance": 250,
+        "MaxSpawnDistance": 10000,
+        "SurfaceHeightOffset": 1,
+        "LocationCheckTime": 5,
+        "MaxParticleCount": 1,
+        "bSpawnInPlayerViewport": true
+      }
+    },
+    "PlayerComponentSpawnPrototypes": {},
+    "ActorComponentSpawnPrototypes": {},
+    "ActorParticleVFXes": [],
+    "PlayerParticleVFX": "None",
+    "LightningStrikeVFX": {
+      "LightningStrikeDefault": "/DynamicWeatherOverhaul/_Stalker_2/VFX/Environment/LightningStrike/NS_LightningStrike_Ground.NS_LightningStrike_Ground",
+      "LightningStrikeMetal": {
+        "NiagaraSystem": "/DynamicWeatherOverhaul/_Stalker_2/VFX/Environment/LightningStrike/NS_LightningStrike_Metal.NS_LightningStrike_Metal",
+        "PhysicalMaterialTypes": ["MetalThin", "MetalSolid", "MetalGrid"]
+      },
+      "LightningStrikeWater": {
+        "NiagaraSystem": "/DynamicWeatherOverhaul/_Stalker_2/VFX/Environment/LightningStrike/NS_LightningStrike_Water.NS_LightningStrike_Water",
+        "PhysicalMaterialTypes": ["Water"]
+      },
+      "LightningStrikeWood": {
+        "NiagaraSystem": "/DynamicWeatherOverhaul/_Stalker_2/VFX/Environment/LightningStrike/NS_LightningStrike_Tree.NS_LightningStrike_Tree",
+        "PhysicalMaterialTypes": ["WoodThin", "WoodSolid", "Slate"]
+      }
+    },
+    "LightningStrikeDamagePrototype": {
+      "PlayerHitProbability": 0.1,
+      "PlayerHitCheckTime": 9000,
+      "HeightPriorityRadius": 500,
+      "HeightPriorityUsageProbability": 0.5,
+      "PlayerHitEffects": [
+        {
+          "EffectSID": {
+            "Value": "LightningStrikeHitPlayer"
+          }
+        },
+        {
+          "EffectSID": {
+            "Value": "ElectroIntensityPostProcess"
+          }
+        }
+      ],
+      "NPCHitEffects": [
+        {
+          "EffectSID": {
+            "Value": "LightningStrikeHitNPC"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Name": "TumbleweedFlies",
+    "ParticleType": "TumbleweedFlies",
+    "Providers": [],
+    "bCanSpawnOnWater": true,
+    "bStopOnCutscene": false,
+    "IndoorSpawnPrototype": {
+      "IgnoredAudioRoomPresets": ["GlobalExterior"],
+      "ForbiddenBandwidthTypes": ["Close", "HalfOpen", "Isolated", "Custom"],
+      "MinDistanceToAudioVolume": 0
+    },
+    "BiomeSpawnPrototype": {
+      "AllowedBiomeNames": [],
+      "CountableBiomeNames": [],
+      "BiomeCheckRadius": 1,
+      "MinBiomeCompatabilityPercent": 0
+    },
+    "PlayerDistancePrototype": {
+      "MaxDistance": 500
+    },
+    "WindIntensityPrototype": {
+      "AllowedWindIntensityInterval": {
+        "Min": 0,
+        "Max": 0.5
+      }
+    },
+    "ActorSpawnPrototypes": {},
+    "PlayerComponentSpawnPrototypes": {},
+    "ActorComponentSpawnPrototypes": {},
+    "ActorParticleVFXes": [],
+    "PlayerParticleVFX": "None",
+    "LightningStrikeVFX": {
+      "LightningStrikeDefault": "None",
+      "LightningStrikeMetal": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      },
+      "LightningStrikeWater": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      },
+      "LightningStrikeWood": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      }
+    },
+    "LightningStrikeDamagePrototype": {
+      "PlayerHitProbability": 0,
+      "PlayerHitCheckTime": 0,
+      "HeightPriorityRadius": 1,
+      "HeightPriorityUsageProbability": 0,
+      "PlayerHitEffects": [],
+      "NPCHitEffects": []
+    }
+  },
+  {
+    "Name": "Leaves",
+    "ParticleType": "Leaves",
+    "Providers": [
+      "/Script/CoreUObject.Class'/Script/Stalker2.NiagaraWindIntensityDirectionProvider'",
+      "/Script/CoreUObject.Class'/Script/Stalker2.NiagaraTerrainOffsetProvider'"
+    ],
+    "bCanSpawnOnWater": false,
+    "bStopOnCutscene": false,
+    "IndoorSpawnPrototype": {
+      "IgnoredAudioRoomPresets": ["GlobalExterior"],
+      "ForbiddenBandwidthTypes": ["Close", "HalfOpen", "Isolated", "Custom"],
+      "MinDistanceToAudioVolume": 0
+    },
+    "BiomeSpawnPrototype": {
+      "AllowedBiomeNames": ["Pine Forest", "Forest steppe", "Burned Forest", "Red Forest", "Decidious"],
+      "CountableBiomeNames": ["Red Forest"],
+      "BiomeCheckRadius": 100,
+      "MinBiomeCompatabilityPercent": 0.5
+    },
+    "PlayerDistancePrototype": {
+      "MaxDistance": 10000
+    },
+    "WindIntensityPrototype": {
+      "AllowedWindIntensityInterval": {
+        "Min": 0,
+        "Max": 1
+      }
+    },
+    "ActorSpawnPrototypes": {},
+    "PlayerComponentSpawnPrototypes": {},
+    "ActorComponentSpawnPrototypes": {
+      "Stormy": {
+        "ActorSpawnPrototype": {
+          "BaseSpawnProbability": 0.3,
+          "SpawnProbabilityIncrement": 0.1,
+          "SpawnProbabilityCheckTime": 10,
+          "MinSpawnDistance": 2000,
+          "MaxSpawnDistance": 4000,
+          "SurfaceHeightOffset": 1,
+          "LocationCheckTime": 5,
+          "MaxParticleCount": 1,
+          "bSpawnInPlayerViewport": true
+        },
+        "PlayerComponentSpawnPrototype": {
+          "BaseSpawnProbability": 0.4,
+          "SpawnProbabilityIncrement": 0.15,
+          "SpawnProbabilityCheckTime": 2,
+          "LocationCheckTime": 1,
+          "PlayerHeadOffset": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          }
+        }
+      },
+      "Cloudy": {
+        "ActorSpawnPrototype": {
+          "BaseSpawnProbability": 0.5,
+          "SpawnProbabilityIncrement": 0.1,
+          "SpawnProbabilityCheckTime": 10,
+          "MinSpawnDistance": 2000,
+          "MaxSpawnDistance": 5000,
+          "SurfaceHeightOffset": 10,
+          "LocationCheckTime": 0,
+          "MaxParticleCount": 2,
+          "bSpawnInPlayerViewport": true
+        },
+        "PlayerComponentSpawnPrototype": {
+          "BaseSpawnProbability": 0.3,
+          "SpawnProbabilityIncrement": 0.1,
+          "SpawnProbabilityCheckTime": 3,
+          "LocationCheckTime": 5,
+          "PlayerHeadOffset": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          }
+        }
+      },
+      "Fogy": {
+        "ActorSpawnPrototype": {
+          "BaseSpawnProbability": 0.3,
+          "SpawnProbabilityIncrement": 0.1,
+          "SpawnProbabilityCheckTime": 10,
+          "MinSpawnDistance": 0,
+          "MaxSpawnDistance": 0,
+          "SurfaceHeightOffset": 1,
+          "LocationCheckTime": 0,
+          "MaxParticleCount": 1,
+          "bSpawnInPlayerViewport": true
+        },
+        "PlayerComponentSpawnPrototype": {
+          "BaseSpawnProbability": 0.3,
+          "SpawnProbabilityIncrement": 0.1,
+          "SpawnProbabilityCheckTime": 5,
+          "LocationCheckTime": 5,
+          "PlayerHeadOffset": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          }
+        }
+      },
+      "LightRainy": {
+        "ActorSpawnPrototype": {
+          "BaseSpawnProbability": 0.3,
+          "SpawnProbabilityIncrement": 0.1,
+          "SpawnProbabilityCheckTime": 10,
+          "MinSpawnDistance": 2000,
+          "MaxSpawnDistance": 4000,
+          "SurfaceHeightOffset": 1,
+          "LocationCheckTime": 0,
+          "MaxParticleCount": 3,
+          "bSpawnInPlayerViewport": true
+        },
+        "PlayerComponentSpawnPrototype": {
+          "BaseSpawnProbability": 0.3,
+          "SpawnProbabilityIncrement": 0.1,
+          "SpawnProbabilityCheckTime": 5,
+          "LocationCheckTime": 5,
+          "PlayerHeadOffset": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          }
+        }
+      },
+      "Rainy": {
+        "ActorSpawnPrototype": {
+          "BaseSpawnProbability": 0.3,
+          "SpawnProbabilityIncrement": 0.1,
+          "SpawnProbabilityCheckTime": 10,
+          "MinSpawnDistance": 2000,
+          "MaxSpawnDistance": 4000,
+          "SurfaceHeightOffset": 1,
+          "LocationCheckTime": 0,
+          "MaxParticleCount": 2,
+          "bSpawnInPlayerViewport": true
+        },
+        "PlayerComponentSpawnPrototype": {
+          "BaseSpawnProbability": 0.3,
+          "SpawnProbabilityIncrement": 0.1,
+          "SpawnProbabilityCheckTime": 5,
+          "LocationCheckTime": 5,
+          "PlayerHeadOffset": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          }
+        }
+      },
+      "Thundery": {
+        "ActorSpawnPrototype": {
+          "BaseSpawnProbability": 0.3,
+          "SpawnProbabilityIncrement": 0.1,
+          "SpawnProbabilityCheckTime": 10,
+          "MinSpawnDistance": 2000,
+          "MaxSpawnDistance": 4000,
+          "SurfaceHeightOffset": 1,
+          "LocationCheckTime": 0,
+          "MaxParticleCount": 1,
+          "bSpawnInPlayerViewport": true
+        },
+        "PlayerComponentSpawnPrototype": {
+          "BaseSpawnProbability": 0.3,
+          "SpawnProbabilityIncrement": 0.1,
+          "SpawnProbabilityCheckTime": 5,
+          "LocationCheckTime": 5,
+          "PlayerHeadOffset": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          }
+        }
+      },
+      "Emission": {
+        "ActorSpawnPrototype": {
+          "BaseSpawnProbability": 0.3,
+          "SpawnProbabilityIncrement": 0.1,
+          "SpawnProbabilityCheckTime": 10,
+          "MinSpawnDistance": 2000,
+          "MaxSpawnDistance": 4000,
+          "SurfaceHeightOffset": 1,
+          "LocationCheckTime": 5,
+          "MaxParticleCount": 1,
+          "bSpawnInPlayerViewport": true
+        },
+        "PlayerComponentSpawnPrototype": {
+          "BaseSpawnProbability": 0.4,
+          "SpawnProbabilityIncrement": 0.15,
+          "SpawnProbabilityCheckTime": 4,
+          "LocationCheckTime": 0,
+          "PlayerHeadOffset": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          }
+        }
+      },
+      "CalmBeforeEmission": {
+        "ActorSpawnPrototype": {
+          "BaseSpawnProbability": 0.3,
+          "SpawnProbabilityIncrement": 0.1,
+          "SpawnProbabilityCheckTime": 10,
+          "MinSpawnDistance": 2000,
+          "MaxSpawnDistance": 4000,
+          "SurfaceHeightOffset": 1,
+          "LocationCheckTime": 0,
+          "MaxParticleCount": 1,
+          "bSpawnInPlayerViewport": true
+        },
+        "PlayerComponentSpawnPrototype": {
+          "BaseSpawnProbability": 0.4,
+          "SpawnProbabilityIncrement": 0.15,
+          "SpawnProbabilityCheckTime": 4,
+          "LocationCheckTime": 0,
+          "PlayerHeadOffset": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          }
+        }
+      },
+      "Clearly": {
+        "ActorSpawnPrototype": {
+          "BaseSpawnProbability": 0.5,
+          "SpawnProbabilityIncrement": 0.1,
+          "SpawnProbabilityCheckTime": 10,
+          "MinSpawnDistance": 2000,
+          "MaxSpawnDistance": 5000,
+          "SurfaceHeightOffset": 10,
+          "LocationCheckTime": 0,
+          "MaxParticleCount": 2,
+          "bSpawnInPlayerViewport": true
+        },
+        "PlayerComponentSpawnPrototype": {
+          "BaseSpawnProbability": 0.3,
+          "SpawnProbabilityIncrement": 0.1,
+          "SpawnProbabilityCheckTime": 3,
+          "LocationCheckTime": 5,
+          "PlayerHeadOffset": {
+            "X": 0,
+            "Y": 0,
+            "Z": 0
+          }
+        }
+      }
+    },
+    "ActorParticleVFXes": [
+      "/Game/_Stalker_2/VFX/Environment/Leaves/NS_GroundLeaves_1.NS_GroundLeaves_1",
+      "/Game/_Stalker_2/VFX/Environment/Leaves/NS_GroundLeaves_2.NS_GroundLeaves_2",
+      "/Game/_Stalker_2/VFX/Environment/Leaves/NS_GroundLeaves_3.NS_GroundLeaves_3"
+    ],
+    "PlayerParticleVFX": "/Game/_Stalker_2/VFX/Player/NS_Leaves_Player.NS_Leaves_Player",
+    "LightningStrikeVFX": {
+      "LightningStrikeDefault": "None",
+      "LightningStrikeMetal": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      },
+      "LightningStrikeWater": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      },
+      "LightningStrikeWood": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      }
+    },
+    "LightningStrikeDamagePrototype": {
+      "PlayerHitProbability": 0,
+      "PlayerHitCheckTime": 0,
+      "HeightPriorityRadius": 1,
+      "HeightPriorityUsageProbability": 0,
+      "PlayerHitEffects": [],
+      "NPCHitEffects": []
+    }
+  },
+  {
+    "Name": "BogFlies",
+    "ParticleType": "BogFlies",
+    "Providers": [],
+    "bCanSpawnOnWater": false,
+    "bStopOnCutscene": false,
+    "IndoorSpawnPrototype": {
+      "IgnoredAudioRoomPresets": ["GlobalExterior"],
+      "ForbiddenBandwidthTypes": ["Close", "HalfOpen", "Isolated", "Custom"],
+      "MinDistanceToAudioVolume": 0
+    },
+    "BiomeSpawnPrototype": {
+      "AllowedBiomeNames": ["Swamp", "Landfill"],
+      "CountableBiomeNames": [],
+      "BiomeCheckRadius": 5,
+      "MinBiomeCompatabilityPercent": 0.3
+    },
+    "PlayerDistancePrototype": {
+      "MaxDistance": 1000
+    },
+    "WindIntensityPrototype": {
+      "AllowedWindIntensityInterval": {
+        "Min": 0,
+        "Max": 0.5
+      }
+    },
+    "ActorSpawnPrototypes": {},
+    "PlayerComponentSpawnPrototypes": {
+      "Fogy": {
+        "BaseSpawnProbability": 0.6,
+        "SpawnProbabilityIncrement": 0.1,
+        "SpawnProbabilityCheckTime": 10,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        }
+      },
+      "Cloudy": {
+        "BaseSpawnProbability": 0.7,
+        "SpawnProbabilityIncrement": 0.1,
+        "SpawnProbabilityCheckTime": 10,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        }
+      },
+      "LightRainy": {
+        "BaseSpawnProbability": 0.1,
+        "SpawnProbabilityIncrement": 0.1,
+        "SpawnProbabilityCheckTime": 10,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        }
+      },
+      "Clearly": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 0.1,
+        "SpawnProbabilityCheckTime": 10,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        }
+      }
+    },
+    "ActorComponentSpawnPrototypes": {},
+    "ActorParticleVFXes": [],
+    "PlayerParticleVFX": "/Game/_Stalker_2/VFX/Player/NS_Character_Flies.NS_Character_Flies",
+    "LightningStrikeVFX": {
+      "LightningStrikeDefault": "None",
+      "LightningStrikeMetal": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      },
+      "LightningStrikeWater": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      },
+      "LightningStrikeWood": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      }
+    },
+    "LightningStrikeDamagePrototype": {
+      "PlayerHitProbability": 0,
+      "PlayerHitCheckTime": 0,
+      "HeightPriorityRadius": 1,
+      "HeightPriorityUsageProbability": 0,
+      "PlayerHitEffects": [],
+      "NPCHitEffects": []
+    }
+  },
+  {
+    "Name": "Dust",
+    "ParticleType": "DynamicDust",
+    "Providers": [
+      "/Script/CoreUObject.Class'/Script/Stalker2.NiagaraWindIntensityDirectionProvider'",
+      "/Script/CoreUObject.Class'/Script/Stalker2.NiagaraTerrainOffsetProvider'",
+      "/Script/CoreUObject.Class'/Script/Stalker2.NiagaraTimeOfDayNormalizedProvider'"
+    ],
+    "bCanSpawnOnWater": false,
+    "bStopOnCutscene": false,
+    "IndoorSpawnPrototype": {
+      "IgnoredAudioRoomPresets": ["GlobalExterior"],
+      "ForbiddenBandwidthTypes": ["Close", "HalfOpen", "Isolated", "Custom"],
+      "MinDistanceToAudioVolume": 0
+    },
+    "BiomeSpawnPrototype": {
+      "AllowedBiomeNames": [],
+      "CountableBiomeNames": [],
+      "BiomeCheckRadius": 1,
+      "MinBiomeCompatabilityPercent": 0
+    },
+    "PlayerDistancePrototype": {
+      "MaxDistance": 0
+    },
+    "WindIntensityPrototype": {
+      "AllowedWindIntensityInterval": {
+        "Min": 0,
+        "Max": 1
+      }
+    },
+    "ActorSpawnPrototypes": {},
+    "PlayerComponentSpawnPrototypes": {
+      "Clearly": {
+        "BaseSpawnProbability": 0.2,
+        "SpawnProbabilityIncrement": 0.1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        }
+      },
+      "Cloudy": {
+        "BaseSpawnProbability": 0.2,
+        "SpawnProbabilityIncrement": 0.15,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        }
+      },
+      "CalmBeforeEmission": {
+        "BaseSpawnProbability": 0.4,
+        "SpawnProbabilityIncrement": 0.2,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        }
+      },
+      "Stormy": {
+        "BaseSpawnProbability": 0.3,
+        "SpawnProbabilityIncrement": 0.15,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        }
+      },
+      "Emission": {
+        "BaseSpawnProbability": 0.4,
+        "SpawnProbabilityIncrement": 0.2,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        }
+      }
+    },
+    "ActorComponentSpawnPrototypes": {},
+    "ActorParticleVFXes": [],
+    "PlayerParticleVFX": "/Game/_Stalker_2/VFX/Player/NS_Character_Dust.NS_Character_Dust",
+    "LightningStrikeVFX": {
+      "LightningStrikeDefault": "None",
+      "LightningStrikeMetal": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      },
+      "LightningStrikeWater": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      },
+      "LightningStrikeWood": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      }
+    },
+    "LightningStrikeDamagePrototype": {
+      "PlayerHitProbability": 0,
+      "PlayerHitCheckTime": 0,
+      "HeightPriorityRadius": 1,
+      "HeightPriorityUsageProbability": 0,
+      "PlayerHitEffects": [],
+      "NPCHitEffects": []
+    }
+  },
+  {
+    "Name": "FlyingCrows",
+    "ParticleType": "FlyingCrowsAndBats",
+    "Providers": ["/Script/CoreUObject.Class'/Script/Stalker2.NiagaraTimeOfDayNormalizedProvider'"],
+    "bCanSpawnOnWater": false,
+    "bStopOnCutscene": false,
+    "IndoorSpawnPrototype": {
+      "IgnoredAudioRoomPresets": ["GlobalExterior"],
+      "ForbiddenBandwidthTypes": ["Close", "HalfOpen", "Isolated"],
+      "MinDistanceToAudioVolume": 100
+    },
+    "BiomeSpawnPrototype": {
+      "AllowedBiomeNames": [],
+      "CountableBiomeNames": [],
+      "BiomeCheckRadius": 1,
+      "MinBiomeCompatabilityPercent": 0
+    },
+    "PlayerDistancePrototype": {
+      "MaxDistance": 20000
+    },
+    "WindIntensityPrototype": {
+      "AllowedWindIntensityInterval": {
+        "Min": 0,
+        "Max": 1
+      }
+    },
+    "ActorSpawnPrototypes": {
+      "Rainy": {
+        "BaseSpawnProbability": 0.1,
+        "SpawnProbabilityIncrement": 0.1,
+        "SpawnProbabilityCheckTime": 25,
+        "MinSpawnDistance": 0,
+        "MaxSpawnDistance": 0,
+        "SurfaceHeightOffset": 0,
+        "LocationCheckTime": 0,
+        "MaxParticleCount": 1,
+        "bSpawnInPlayerViewport": false
+      },
+      "LightRainy": {
+        "BaseSpawnProbability": 0.3,
+        "SpawnProbabilityIncrement": 0.3,
+        "SpawnProbabilityCheckTime": 20,
+        "MinSpawnDistance": 0,
+        "MaxSpawnDistance": 0,
+        "SurfaceHeightOffset": 0,
+        "LocationCheckTime": 0,
+        "MaxParticleCount": 1,
+        "bSpawnInPlayerViewport": true
+      },
+      "Fogy": {
+        "BaseSpawnProbability": 0.5,
+        "SpawnProbabilityIncrement": 0.5,
+        "SpawnProbabilityCheckTime": 10,
+        "MinSpawnDistance": 0,
+        "MaxSpawnDistance": 0,
+        "SurfaceHeightOffset": 0,
+        "LocationCheckTime": 0,
+        "MaxParticleCount": 1,
+        "bSpawnInPlayerViewport": true
+      },
+      "Cloudy": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 5,
+        "MinSpawnDistance": 0,
+        "MaxSpawnDistance": 0,
+        "SurfaceHeightOffset": 0,
+        "LocationCheckTime": 0,
+        "MaxParticleCount": 1,
+        "bSpawnInPlayerViewport": false
+      },
+      "Clearly": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 1,
+        "MinSpawnDistance": 0,
+        "MaxSpawnDistance": 0,
+        "SurfaceHeightOffset": 0,
+        "LocationCheckTime": 0,
+        "MaxParticleCount": 1,
+        "bSpawnInPlayerViewport": false
+      }
+    },
+    "PlayerComponentSpawnPrototypes": {},
+    "ActorComponentSpawnPrototypes": {},
+    "ActorParticleVFXes": ["/Game/_Stalker_2/VFX/Player/NS_Character_Crow.NS_Character_Crow"],
+    "PlayerParticleVFX": "None",
+    "LightningStrikeVFX": {
+      "LightningStrikeDefault": "None",
+      "LightningStrikeMetal": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      },
+      "LightningStrikeWater": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      },
+      "LightningStrikeWood": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      }
+    },
+    "LightningStrikeDamagePrototype": {
+      "PlayerHitProbability": 0,
+      "PlayerHitCheckTime": 0,
+      "HeightPriorityRadius": 1,
+      "HeightPriorityUsageProbability": 0,
+      "PlayerHitEffects": [],
+      "NPCHitEffects": []
+    }
+  },
+  {
+    "Name": "Rainbow",
+    "ParticleType": "Rainbow",
+    "Providers": [
+      "/Script/CoreUObject.Class'/Script/Stalker2.NiagaraTimeOfDayNormalizedProvider'",
+      "/Script/CoreUObject.Class'/Script/Stalker2.NiagaraTerrainOffsetProvider'",
+      "/Script/CoreUObject.Class'/Script/Stalker2.NiagaraSunRotationProvider'",
+      "/Script/CoreUObject.Class'/Script/Stalker2.NiagaraRainbowOpacityProvider'"
+    ],
+    "bCanSpawnOnWater": false,
+    "bStopOnCutscene": false,
+    "IndoorSpawnPrototype": {
+      "IgnoredAudioRoomPresets": [],
+      "ForbiddenBandwidthTypes": [],
+      "MinDistanceToAudioVolume": 0
+    },
+    "BiomeSpawnPrototype": {
+      "AllowedBiomeNames": [],
+      "CountableBiomeNames": [],
+      "BiomeCheckRadius": 1,
+      "MinBiomeCompatabilityPercent": 0
+    },
+    "PlayerDistancePrototype": {
+      "MaxDistance": 0
+    },
+    "WindIntensityPrototype": {
+      "AllowedWindIntensityInterval": {
+        "Min": 0,
+        "Max": 1
+      }
+    },
+    "ActorSpawnPrototypes": {},
+    "PlayerComponentSpawnPrototypes": {
+      "LightRainy": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        }
+      }
+    },
+    "ActorComponentSpawnPrototypes": {},
+    "ActorParticleVFXes": [],
+    "PlayerParticleVFX": "/Game/_Stalker_2/VFX/Environment/Rainbow/NS_Dyn_Rainbow_Weather.NS_Dyn_Rainbow_Weather",
+    "LightningStrikeVFX": {
+      "LightningStrikeDefault": "None",
+      "LightningStrikeMetal": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      },
+      "LightningStrikeWater": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      },
+      "LightningStrikeWood": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      }
+    },
+    "LightningStrikeDamagePrototype": {
+      "PlayerHitProbability": 0,
+      "PlayerHitCheckTime": 0,
+      "HeightPriorityRadius": 1,
+      "HeightPriorityUsageProbability": 0,
+      "PlayerHitEffects": [],
+      "NPCHitEffects": []
+    }
+  },
+  {
+    "Name": "WeatherLightning",
+    "ParticleType": "WeatherLightning",
+    "Providers": [
+      "/Script/CoreUObject.Class'/Script/Stalker2.NiagaraWindIntensityDirectionProvider'",
+      "/Script/CoreUObject.Class'/Script/Stalker2.NiagaraPlayerLocationProvider'",
+      "/Script/CoreUObject.Class'/Script/Stalker2.NiagaraLightningDataProvider'"
+    ],
+    "bCanSpawnOnWater": false,
+    "bStopOnCutscene": false,
+    "IndoorSpawnPrototype": {
+      "IgnoredAudioRoomPresets": [],
+      "ForbiddenBandwidthTypes": [],
+      "MinDistanceToAudioVolume": 0
+    },
+    "BiomeSpawnPrototype": {
+      "AllowedBiomeNames": [],
+      "CountableBiomeNames": [],
+      "BiomeCheckRadius": 1,
+      "MinBiomeCompatabilityPercent": 0
+    },
+    "PlayerDistancePrototype": {
+      "MaxDistance": 0
+    },
+    "WindIntensityPrototype": {
+      "AllowedWindIntensityInterval": {
+        "Min": 0,
+        "Max": 1
+      }
+    },
+    "ActorSpawnPrototypes": {},
+    "PlayerComponentSpawnPrototypes": {
+      "Rainy": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      },
+      "Emission": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      },
+      "CalmBeforeEmission": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      },
+      "Thundery": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      },
+      "Cloudy": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      },
+      "Fogy": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      },
+      "Stormy": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      },
+      "LightRainy": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      },
+      "Clearly": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      }
+    },
+    "ActorComponentSpawnPrototypes": {},
+    "ActorParticleVFXes": [],
+    "PlayerParticleVFX": "/DynamicWeatherOverhaul/_Stalker_2/VFX/Environment/Rain/Niagara/NS_Dyn_Lightning_2_Weather.NS_Dyn_Lightning_2_Weather",
+    "LightningStrikeVFX": {
+      "LightningStrikeDefault": "None",
+      "LightningStrikeMetal": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      },
+      "LightningStrikeWater": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      },
+      "LightningStrikeWood": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      }
+    },
+    "LightningStrikeDamagePrototype": {
+      "PlayerHitProbability": 0,
+      "PlayerHitCheckTime": 0,
+      "HeightPriorityRadius": 1,
+      "HeightPriorityUsageProbability": 0,
+      "PlayerHitEffects": [],
+      "NPCHitEffects": []
+    }
+  },
+  {
+    "Name": "WeatherRain",
+    "ParticleType": "WeatherRain",
+    "Providers": [
+      "/Script/CoreUObject.Class'/Script/Stalker2.NiagaraWindIntensityDirectionProvider'",
+      "/Script/CoreUObject.Class'/Script/Stalker2.NiagaraPlayerLocationProvider'",
+      "/Script/CoreUObject.Class'/Script/Stalker2.NiagaraRainIntensityProvider'"
+    ],
+    "bCanSpawnOnWater": false,
+    "bStopOnCutscene": false,
+    "IndoorSpawnPrototype": {
+      "IgnoredAudioRoomPresets": [],
+      "ForbiddenBandwidthTypes": [],
+      "MinDistanceToAudioVolume": 0
+    },
+    "BiomeSpawnPrototype": {
+      "AllowedBiomeNames": [],
+      "CountableBiomeNames": [],
+      "BiomeCheckRadius": 1,
+      "MinBiomeCompatabilityPercent": 0
+    },
+    "PlayerDistancePrototype": {
+      "MaxDistance": 0
+    },
+    "WindIntensityPrototype": {
+      "AllowedWindIntensityInterval": {
+        "Min": 0,
+        "Max": 1
+      }
+    },
+    "ActorSpawnPrototypes": {},
+    "PlayerComponentSpawnPrototypes": {
+      "Rainy": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      },
+      "Emission": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      },
+      "CalmBeforeEmission": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      },
+      "Thundery": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      },
+      "Cloudy": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      },
+      "Fogy": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      },
+      "Stormy": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      },
+      "LightRainy": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      },
+      "Clearly": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      }
+    },
+    "ActorComponentSpawnPrototypes": {},
+    "ActorParticleVFXes": [],
+    "PlayerParticleVFX": "/DynamicWeatherOverhaul/_Stalker_2/VFX/Environment/Rain/Niagara/NS_Dyn_Rain_Weather.NS_Dyn_Rain_Weather",
+    "LightningStrikeVFX": {
+      "LightningStrikeDefault": "None",
+      "LightningStrikeMetal": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      },
+      "LightningStrikeWater": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      },
+      "LightningStrikeWood": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      }
+    },
+    "LightningStrikeDamagePrototype": {
+      "PlayerHitProbability": 0,
+      "PlayerHitCheckTime": 0,
+      "HeightPriorityRadius": 1,
+      "HeightPriorityUsageProbability": 0,
+      "PlayerHitEffects": [],
+      "NPCHitEffects": []
+    }
+  },
+  {
+    "Name": "WeatherStormyLeaves",
+    "ParticleType": "WeatherStormyLeaves",
+    "Providers": [
+      "/Script/CoreUObject.Class'/Script/Stalker2.NiagaraTerrainOffsetProvider'",
+      "/Script/CoreUObject.Class'/Script/Stalker2.NiagaraWindIntensityDirectionProvider'",
+      "/Script/CoreUObject.Class'/Script/Stalker2.NiagaraPlayerLocationProvider'",
+      "/Script/CoreUObject.Class'/Script/Stalker2.NiagaraStormSpawnRateProvider'"
+    ],
+    "bCanSpawnOnWater": false,
+    "bStopOnCutscene": false,
+    "IndoorSpawnPrototype": {
+      "IgnoredAudioRoomPresets": [],
+      "ForbiddenBandwidthTypes": [],
+      "MinDistanceToAudioVolume": 0
+    },
+    "BiomeSpawnPrototype": {
+      "AllowedBiomeNames": [],
+      "CountableBiomeNames": [],
+      "BiomeCheckRadius": 1,
+      "MinBiomeCompatabilityPercent": 0
+    },
+    "PlayerDistancePrototype": {
+      "MaxDistance": 0
+    },
+    "WindIntensityPrototype": {
+      "AllowedWindIntensityInterval": {
+        "Min": 0,
+        "Max": 1
+      }
+    },
+    "ActorSpawnPrototypes": {},
+    "PlayerComponentSpawnPrototypes": {
+      "Rainy": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      },
+      "Emission": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      },
+      "CalmBeforeEmission": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      },
+      "Thundery": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      },
+      "Cloudy": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      },
+      "Fogy": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      },
+      "Stormy": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      },
+      "LightRainy": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      },
+      "Clearly": {
+        "BaseSpawnProbability": 1,
+        "SpawnProbabilityIncrement": 1,
+        "SpawnProbabilityCheckTime": 0,
+        "LocationCheckTime": 0,
+        "PlayerHeadOffset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 2000
+        }
+      }
+    },
+    "ActorComponentSpawnPrototypes": {},
+    "ActorParticleVFXes": [],
+    "PlayerParticleVFX": "/DynamicWeatherOverhaul/_Stalker_2/VFX/Environment/Rain/Niagara/NS_Dyn_Storm_Weather.NS_Dyn_Storm_Weather",
+    "LightningStrikeVFX": {
+      "LightningStrikeDefault": "None",
+      "LightningStrikeMetal": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      },
+      "LightningStrikeWater": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      },
+      "LightningStrikeWood": {
+        "NiagaraSystem": "None",
+        "PhysicalMaterialTypes": []
+      }
+    },
+    "LightningStrikeDamagePrototype": {
+      "PlayerHitProbability": 0,
+      "PlayerHitCheckTime": 0,
+      "HeightPriorityRadius": 1,
+      "HeightPriorityUsageProbability": 0,
+      "PlayerHitEffects": [],
+      "NPCHitEffects": []
+    }
+  }
 ]
