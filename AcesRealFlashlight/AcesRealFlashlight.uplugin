@@ -4,7 +4,7 @@
 	"VersionName": "1.0",
 	"FriendlyName": "AcesRealFlashlight",
 	"Description": "",
-	"Category": "Other",
+	"Category": "Game Features",
 	"CreatedBy": "Feliche",
 	"CreatedByURL": "",
 	"DocsURL": "",
@@ -13,5 +13,15 @@
 	"CanContainContent": true,
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
-	"Installed": false
+	"Installed": false,
+	"EnabledByDefault": true,
+	"ExplicitlyLoaded": true,
+	"BuiltInInitialFeatureState": "Registered",
+	"Mod": true,
+	"Plugins": [
+		{
+			"Name": "ModConfigurationMenu",
+			"Enabled": true
+		}
+	]
 }
