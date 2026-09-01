@@ -82,7 +82,8 @@
 				"Rainy",
 				"Thundery",
 				"Emission",
-				"CalmBeforeEmission"
+				"CalmBeforeEmission",
+				"Underground"
 			]
 		},
 		"LairPrototype":
@@ -151,12 +152,14 @@
 				"Clearly",
 				"Cloudy",
 				"Fogy",
+				"Fogy",
 				"Stormy",
 				"LightRainy",
 				"Rainy",
 				"Thundery",
 				"Emission",
-				"CalmBeforeEmission"
+				"CalmBeforeEmission",
+				"Underground"
 			]
 		},
 		"LairPrototype":
@@ -224,7 +227,8 @@
 				"Rainy",
 				"Thundery",
 				"Emission",
-				"CalmBeforeEmission"
+				"CalmBeforeEmission",
+				"Underground"
 			]
 		},
 		"LairPrototype":
@@ -290,7 +294,12 @@
 				"Cloudy",
 				"Fogy",
 				"Stormy",
-				"LightRainy"
+				"LightRainy",
+				"Rainy",
+				"Thundery",
+				"Emission",
+				"CalmBeforeEmission",
+				"Underground"
 			]
 		},
 		"LairPrototype":
@@ -326,10 +335,10 @@
 			}
 		},
 		"NiagaraSystems": [
+			"/Game/_Stalker_2/VFX/Environment/BonFire/Niagara/NS_Bonfire.NS_Bonfire",
 			"/Game/_Stalker_2/VFX/Cinematic/E06_MQ02/NS_CIN_Fire_Ground.NS_CIN_Fire_Ground",
 			"/Game/_Stalker_2/VFX/Cinematic/E06_MQ02/NS_CIN_Fire_Ground_2.NS_CIN_Fire_Ground_2",
-			"/Game/_Stalker_2/VFX/Cinematic/E06_MQ02/NS_CIN_Fire_Ground_Wall.NS_CIN_Fire_Ground_Wall",
-			"/Game/_Stalker_2/VFX/Environment/BonFire/Niagara/NS_Bonfire.NS_Bonfire"
+			"/Game/_Stalker_2/VFX/Cinematic/E06_MQ02/NS_CIN_Fire_Ground_Wall.NS_CIN_Fire_Ground_Wall"
 		]
 	},
 	{
@@ -357,7 +366,13 @@
 				"Clearly",
 				"Cloudy",
 				"Fogy",
-				"Stormy"
+				"Stormy",
+				"LightRainy",
+				"Rainy",
+				"Thundery",
+				"Emission",
+				"CalmBeforeEmission",
+				"Underground"
 			]
 		},
 		"LairPrototype":
@@ -426,7 +441,8 @@
 				"Rainy",
 				"Thundery",
 				"Emission",
-				"CalmBeforeEmission"
+				"CalmBeforeEmission",
+				"Underground"
 			]
 		},
 		"LairPrototype":
@@ -493,7 +509,8 @@
 				"Rainy",
 				"Emission",
 				"Thundery",
-				"CalmBeforeEmission"
+				"CalmBeforeEmission",
+				"Underground"
 			]
 		},
 		"LairPrototype":
@@ -615,7 +632,8 @@
 				"Rainy",
 				"Thundery",
 				"Emission",
-				"CalmBeforeEmission"
+				"CalmBeforeEmission",
+				"Underground"
 			]
 		},
 		"LairPrototype":
@@ -803,7 +821,8 @@
 				"Clearly",
 				"Cloudy",
 				"Fogy",
-				"LightRainy"
+				"LightRainy",
+				"Underground"
 			]
 		},
 		"LairPrototype":
@@ -868,7 +887,8 @@
 				"Clearly",
 				"Cloudy",
 				"LightRainy",
-				"Fogy"
+				"Fogy",
+				"Underground"
 			]
 		},
 		"LairPrototype":
@@ -1101,9 +1121,11 @@
 				"Clearly",
 				"Cloudy",
 				"Fogy",
+				"Stormy",
 				"LightRainy",
 				"Rainy",
-				"Stormy"
+				"Thundery",
+				"Underground"
 			]
 		},
 		"LairPrototype":
@@ -1153,8 +1175,8 @@
 			"/Game/_Stalker_2/VFX/Environment/Spider/NS_Env_Spider_Zone.NS_Env_Spider_Zone",
 			"/Game/_Stalker_2/VFX/Environment/Bat/NS_ENV_Bat_Vortex_Frwd.NS_ENV_Bat_Vortex_Frwd",
 			"/Game/_Stalker_2/VFX/Environment/Squirrel/NS_Env_Squirrel_Ground.NS_Env_Squirrel_Ground",
-			"/Game/_Stalker_2/VFX/Environment/Mouse/NS_Env_Mouse_Ground.NS_Env_Mouse_Ground",
-			"/Game/_Stalker_2/VFX/Environment/Frog/NS_Env_Frog_GroundJump.NS_Env_Frog_GroundJump"
+			"/Game/_Stalker_2/VFX/Environment/Frog/NS_Env_Frog_GroundJump.NS_Env_Frog_GroundJump",
+			"/Game/_Stalker_2/VFX/Environment/Mouse/NS_Env_Mouse_Ground.NS_Env_Mouse_Ground"
 		]
 	},
 	{
@@ -1174,11 +1196,11 @@
 		"WeatherTypePrototype":
 		{
 			"AllowedWeatherTypes": [
+				"Rainy",
 				"LightRainy",
 				"Fogy",
 				"Cloudy",
-				"Clearly",
-				"Stormy"
+				"Clearly"
 			]
 		},
 		"LairPrototype":
@@ -1234,9 +1256,11 @@
 				"Clearly",
 				"Cloudy",
 				"Fogy",
+				"Stormy",
 				"LightRainy",
 				"Rainy",
-				"Stormy"
+				"Thundery",
+				"Underground"
 			]
 		},
 		"LairPrototype":

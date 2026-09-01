@@ -1706,20 +1706,6 @@
 					"Z": 0
 				},
 				"bAttachToRoot": false
-			},
-			"LightRainy":
-			{
-				"BaseSpawnProbability": 0.5,
-				"SpawnProbabilityIncrement": 0,
-				"SpawnProbabilityCheckTime": 0,
-				"LocationCheckTime": 0,
-				"PlayerHeadOffset":
-				{
-					"X": 0,
-					"Y": 0,
-					"Z": 0
-				},
-				"bAttachToRoot": false
 			}
 		},
 		"ActorComponentSpawnPrototypes":
