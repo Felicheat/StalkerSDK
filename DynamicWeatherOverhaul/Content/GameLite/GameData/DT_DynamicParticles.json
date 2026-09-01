@@ -1075,6 +1075,20 @@
 					"Z": 0
 				},
 				"bAttachToRoot": false
+			},
+			"Rainy":
+			{
+				"BaseSpawnProbability": 1,
+				"SpawnProbabilityIncrement": 1,
+				"SpawnProbabilityCheckTime": 0,
+				"LocationCheckTime": 0,
+				"PlayerHeadOffset":
+				{
+					"X": 0,
+					"Y": 0,
+					"Z": 0
+				},
+				"bAttachToRoot": false
 			}
 		},
 		"ActorComponentSpawnPrototypes":
@@ -1479,6 +1493,20 @@
 					"Z": 2000
 				},
 				"bAttachToRoot": true
+			},
+			"Underground":
+			{
+				"BaseSpawnProbability": 1,
+				"SpawnProbabilityIncrement": 1,
+				"SpawnProbabilityCheckTime": 0,
+				"LocationCheckTime": 0,
+				"PlayerHeadOffset":
+				{
+					"X": 0,
+					"Y": 0,
+					"Z": 2000
+				},
+				"bAttachToRoot": true
 			}
 		},
 		"ActorComponentSpawnPrototypes":
@@ -1588,6 +1616,104 @@
 			{
 				"BaseSpawnProbability": 1,
 				"SpawnProbabilityIncrement": 1,
+				"SpawnProbabilityCheckTime": 0,
+				"LocationCheckTime": 0,
+				"PlayerHeadOffset":
+				{
+					"X": 0,
+					"Y": 0,
+					"Z": 2000
+				},
+				"bAttachToRoot": true
+			},
+			"Cloudy":
+			{
+				"BaseSpawnProbability": 1,
+				"SpawnProbabilityIncrement": 1,
+				"SpawnProbabilityCheckTime": 0,
+				"LocationCheckTime": 0,
+				"PlayerHeadOffset":
+				{
+					"X": 0,
+					"Y": 0,
+					"Z": 2000
+				},
+				"bAttachToRoot": true
+			},
+			"Fogy":
+			{
+				"BaseSpawnProbability": 1,
+				"SpawnProbabilityIncrement": 1,
+				"SpawnProbabilityCheckTime": 0,
+				"LocationCheckTime": 0,
+				"PlayerHeadOffset":
+				{
+					"X": 0,
+					"Y": 0,
+					"Z": 2000
+				},
+				"bAttachToRoot": true
+			},
+			"Rainy":
+			{
+				"BaseSpawnProbability": 1,
+				"SpawnProbabilityIncrement": 1,
+				"SpawnProbabilityCheckTime": 0,
+				"LocationCheckTime": 0,
+				"PlayerHeadOffset":
+				{
+					"X": 0,
+					"Y": 0,
+					"Z": 2000
+				},
+				"bAttachToRoot": true
+			},
+			"Thundery":
+			{
+				"BaseSpawnProbability": 1,
+				"SpawnProbabilityIncrement": 1,
+				"SpawnProbabilityCheckTime": 0,
+				"LocationCheckTime": 0,
+				"PlayerHeadOffset":
+				{
+					"X": 0,
+					"Y": 0,
+					"Z": 2000
+				},
+				"bAttachToRoot": true
+			},
+			"Emission":
+			{
+				"BaseSpawnProbability": 1,
+				"SpawnProbabilityIncrement": 1,
+				"SpawnProbabilityCheckTime": 0,
+				"LocationCheckTime": 0,
+				"PlayerHeadOffset":
+				{
+					"X": 0,
+					"Y": 0,
+					"Z": 2000
+				},
+				"bAttachToRoot": true
+			},
+			"CalmBeforeEmission":
+			{
+				"BaseSpawnProbability": 1,
+				"SpawnProbabilityIncrement": 1,
+				"SpawnProbabilityCheckTime": 0,
+				"LocationCheckTime": 0,
+				"PlayerHeadOffset":
+				{
+					"X": 0,
+					"Y": 0,
+					"Z": 2000
+				},
+				"bAttachToRoot": true
+			},
+			"Underground":
+			{
+				"BaseSpawnProbability": 0,
+				"SpawnProbabilityIncrement": 0,
 				"SpawnProbabilityCheckTime": 0,
 				"LocationCheckTime": 0,
 				"PlayerHeadOffset":
