@@ -17,11 +17,5 @@
 	"EnabledByDefault": true,
 	"ExplicitlyLoaded": true,
 	"BuiltInInitialFeatureState": "Registered",
-	"Mod": true,
-	"Plugins": [
-		{
-			"Name": "ModConfigurationMenu",
-			"Enabled": true
-		}
-	]
+	"Mod": true
 }
