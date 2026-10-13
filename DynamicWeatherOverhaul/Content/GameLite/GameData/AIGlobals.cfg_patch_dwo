@@ -1,13 +1,75 @@
 LuminanceSettings : struct.begin {bpatch}
+   WeatherSettings : struct.begin {bpatch}
+      [0] : struct.begin
+         WeatherSID = Clearly
+         VisibilityCoef = 1.0
+         HearingDistanceCoef = 1.0
+         FlairCoef = 1.0
+      struct.end
+      [1] : struct.begin
+         WeatherSID = Cloudy
+         VisibilityCoef = 0.90
+         HearingDistanceCoef = 1.0
+         FlairCoef = 1.0
+      struct.end
+      [2] : struct.begin
+         WeatherSID = Fogy
+         VisibilityCoef = 0.7
+         HearingDistanceCoef = 1.0
+         FlairCoef = 1.0
+      struct.end
+      [3] : struct.begin
+         WeatherSID = Rainy
+         VisibilityCoef = 0.85
+         HearingDistanceCoef = 0.7
+         FlairCoef = 0.65
+      struct.end
+      [4] : struct.begin
+         WeatherSID = LightRainy
+         VisibilityCoef = 0.90
+         HearingDistanceCoef = 0.9
+         FlairCoef = 0.9
+      struct.end
+      [5] : struct.begin
+         WeatherSID = Thundery
+         VisibilityCoef = 0.65
+         HearingDistanceCoef = 0.3
+         FlairCoef = 0.55
+      struct.end
+      [6] : struct.begin
+         WeatherSID = CalmBeforeEmission
+         VisibilityCoef = 0.65
+         HearingDistanceCoef = 0.5
+         FlairCoef = 0.55
+      struct.end
+      [7] : struct.begin
+         WeatherSID = Emission
+         VisibilityCoef = 0.55
+         HearingDistanceCoef = 0.3
+         FlairCoef = 0.25
+      struct.end
+      [8] : struct.begin
+         WeatherSID = Stormy
+         VisibilityCoef = 0.75
+         HearingDistanceCoef = 0.7
+         FlairCoef = 1
+      struct.end
+      [9] : struct.begin
+         WeatherSID = Underground
+         VisibilityCoef = 1.0
+         HearingDistanceCoef = 1.0
+         FlairCoef = 1.0
+      struct.end
+   struct.end
    EnvironmentLuminanceCoefficients : struct.begin {bpatch}
-      WeatherLuminanceCoefficients : struct.begin
+      WeatherLuminanceCoefficients : struct.begin {bpatch}
          [*] : struct.begin
             WeatherType = EWeather::Clearly
             Coefficient = 1.f
          struct.end
          [*] : struct.begin
             WeatherType = EWeather::Cloudy
-            Coefficient = 0.95f
+            Coefficient = 0.90f
          struct.end
          [*] : struct.begin
             WeatherType = EWeather::Fogy
@@ -15,19 +77,19 @@ LuminanceSettings : struct.begin {bpatch}
          struct.end
          [*] : struct.begin
             WeatherType = EWeather::Stormy
-            Coefficient = 0.85f
+            Coefficient = 0.80f
          struct.end
          [*] : struct.begin
             WeatherType = EWeather::LightRainy
-            Coefficient = 0.85f
+            Coefficient = 0.90f
          struct.end
          [*] : struct.begin
             WeatherType = EWeather::Rainy
-            Coefficient = 0.75f
+            Coefficient = 0.85f
          struct.end
          [*] : struct.begin
             WeatherType = EWeather::Thundery
-            Coefficient = 0.65f
+            Coefficient = 0.75f
          struct.end
          [*] : struct.begin
             WeatherType = EWeather::Emission
@@ -46,12 +108,12 @@ LuminanceSettings : struct.begin {bpatch}
          [*] : struct.begin
             TimeFrom = 0
             TimeTill = 4.5
-            Luminance = 0.2f
+            Luminance = 0.275f
          struct.end
          [*] : struct.begin
             TimeFrom = 4.5
             TimeTill = 7
-            Luminance = 0.35f
+            Luminance = 0.45f
          struct.end
          [*] : struct.begin
             TimeFrom = 7
@@ -71,12 +133,12 @@ LuminanceSettings : struct.begin {bpatch}
          [*] : struct.begin
             TimeFrom = 20
             TimeTill = 21.5
-            Luminance = 0.55f
+            Luminance = 0.65f
          struct.end
          [*] : struct.begin
             TimeFrom = 21.5
             TimeTill = 23.99
-            Luminance = 0.2f
+            Luminance = 0.275f
          struct.end
       struct.end
    struct.end

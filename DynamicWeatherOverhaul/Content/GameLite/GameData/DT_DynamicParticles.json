@@ -1513,7 +1513,7 @@
 		{
 		},
 		"ActorParticleVFXes": [],
-		"PlayerParticleVFX": "/DynamicWeatherOverhaul/_Stalker_2/VFX/Environment/Rain/Niagara/NS_Dyn_Rain_Weather.NS_Dyn_Rain_Weather",
+		"PlayerParticleVFX": "/Game/_Stalker_2/VFX/Environment/Rain/Niagara/NS_Dyn_Rain_Weather.NS_Dyn_Rain_Weather",
 		"LightningStrikeVFX":
 		{
 			"LightningStrikeDefault": "None",
